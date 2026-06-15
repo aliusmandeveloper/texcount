@@ -43,9 +43,10 @@ function App() {
     setResult(null);
     
     try {
-      const response = await axios.post('http://localhost:8000/analyze', {
-        image: base64Image
-      });
+      // const response = await axios.post('http://localhost:8000/analyze', {
+      //   image: base64Image
+      // });
+      const response = await axios.post('https://aliusmanijaz143-texcount-backend.hf.space/analyze', { image: base64Image })
       setResult(response.data);
     } catch (error) {
       console.error('Error:', error);
